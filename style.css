@@ -1,0 +1,315 @@
+/* ===============================
+   NAVIKSOFT Professional CSS
+=================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* ===== Color Variables ===== */
+:root{
+    --primary: #0056D2;
+    --accent: #00BFFF;
+    --dark-text: #1A1A1A;
+    --light-bg: #F4F8FF;
+    --dark-bg: #0D1B2A;
+}
+
+/* ===== Body ===== */
+body{
+    background: var(--light-bg);
+    color: var(--dark-text);
+    line-height:1.6;
+}
+
+/* ===== Container ===== */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:white;
+    position:fixed;
+    backdrop-filter:blur(10px);
+    padding:2px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Logo */
+.logo img{
+    height:95px;
+    display:block;
+}
+
+/* Navigation */
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a{
+    color: var(--primary);
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color: var(--accent);
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+    background: linear-gradient(135deg, var(--primary), var(--dark-bg));
+    color:white;
+    padding:20px 0;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+/* Button */
+.btn{
+    background: var(--primary);
+    color:white;
+    padding:12px 28px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background: var(--accent);
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+    padding:80px 0;
+    text-align:center;
+}
+
+.section.light{
+    background:white;
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:flex;
+    gap:25px;
+    margin-top:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:10px;
+    width:300px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:#E6F2FF;
+}
+
+/* ================= WHY LIST ================= */
+
+.why-list{
+    list-style:none;
+    margin-top:30px;
+}
+
+.why-list li{
+    margin:12px 0;
+    font-weight:500;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background: var(--dark-bg);
+    color:white;
+    text-align:center;
+    padding:25px 0;
+    margin-top:40px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav a{
+        margin:10px 0;
+    }
+
+    header .container{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+/* ================= PRICING ================= */
+/*
+.pricing-grid{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.pricing-card{
+    background:white;
+    padding:40px 30px;
+    border-radius:12px;
+    width:300px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.pricing-card h4{
+    font-size:28px;
+    margin:15px 0;
+    color:var(--primary);
+}
+
+.pricing-card ul{
+    list-style:none;
+    margin:20px 0;
+}
+
+.pricing-card ul li{
+    margin:10px 0;
+}
+
+.pricing-card:hover{
+    transform:translateY(-10px);
+}
+
+.popular{
+    border:2px solid var(--primary);
+    transform:scale(1.05);
+}
+*/
+/* ================= ANIMATION ================= */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.8s ease;
+}
+
+.fade-up.active{
+    opacity:1;
+    transform:translateY(0);
+}
+/* ===== CARDS ===== */
+
+.services-grid{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:35px;
+    width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+/* ===== CTA SECTION ===== */
+
+.gradient-cta{
+    background:linear-gradient(135deg,#2563EB,#7C3AED);
+    color:white;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:#0F172A;
+    color:white;
+    padding:30px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    nav{
+        display:none;
+    }
+}
+.feature-list{
+    list-style:none;
+    max-width:700px;
+    margin:30px auto;
+    text-align:left;
+}
+
+.feature-list li{
+    margin:12px 0;
+    padding-left:25px;
+    position:relative;
+}
+
+.feature-list li::before{
+    content:"✔";
+    position:absolute;
+    left:0;
+    color:var(--primary);
+}
