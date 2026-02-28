@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - NAVIKSOFT</title>
+
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="contact.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO SECTION -->
+<section class="contact-hero">
+    <div class="hero-content">
+        <h1>Let’s Build Your Digital Future</h1>
+        <p>Connect with NAVIKSOFT for enterprise websites and business software solutions.</p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+    <div class="contact-container">
+
+        <!-- LEFT SIDE COMPANY INFO -->
+        <div class="company-info">
+            <h2>Contact Information</h2>
+            <p>We are ready to help you grow digitally.</p>
+
+            <div class="info-box">
+                <h4>📍 Location</h4>
+                <p>Pali, Rajasthan, India</p>
+            </div>
+
+            <div class="info-box">
+                <h4>📞 Phone</h4>
+                <p>+91 8696231423</p>
+            </div>
+
+            <div class="info-box">
+                <h4>📧 Email</h4>
+                <p>Dilrmpsgnr@gmail.com</p>
+            </div>
+
+            <div class="info-box">
+                <h4>🏢 Company</h4>
+                <p>NAVIKSOFT – Custom Software & Web Development</p>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+        <div class="form-box">
+            <h2>Send Us a Message</h2>
+
+            <form id="contactForm">
+
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" placeholder="Mobile Number" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit">Submit Inquiry</button>
+
+                <div class="success-message" id="successMsg">
+                    ✔ Thank you! Our team will contact you shortly.
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 NAVIKSOFT. All Rights Reserved.</p>
+</footer>
+
+<script>
+const form = document.getElementById("contactForm");
+const successMsg = document.getElementById("successMsg");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+    successMsg.style.display = "block";
+    form.reset();
+});
+</script>
+
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-placeholder").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

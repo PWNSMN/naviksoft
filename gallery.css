@@ -1,0 +1,232 @@
+/* ===============================
+   NAVIKSOFT Gallery Corporate CSS
+=================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+:root{
+    --primary:#0A3D91;
+    --dark:#0F172A;
+    --light:#F4F8FF;
+}
+
+/* ===== BODY ===== */
+body{
+    background:#F4F8FF;
+}
+
+/* ===== HEADER ===== */
+header{
+    width:100%;
+    background:white;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,0.06);
+}
+
+.nav-container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo img{
+    height:80px;
+}
+
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00BFFF;
+}
+
+/* ===== SECTION ===== */
+.section{
+    width:100%;
+    padding:100px 20px 80px;
+    text-align:center;
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.section h2{
+    font-size:36px;
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+.section p{
+    font-size:17px;
+    color:#555;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery-grid{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:40px;
+}
+
+/* ===== GALLERY CARD ===== */
+.gallery-item{
+    background:white;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,0.08);
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.gallery-item:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 55px rgba(0,0,0,0.15);
+}
+
+/* ===== IMAGE STYLE ===== */
+.gallery-item img,
+.gallery-item video{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:14px;
+    transition:0.4s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:80px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    nav{
+        display:none;
+    }
+
+    .section h2{
+        font-size:28px;
+    }
+
+    .gallery-item img{
+        height:200px;
+    }
+}/* ===== GALLERY INFO ===== */
+.gallery-info{
+    margin-top:15px;
+    text-align:left;
+}
+
+.gallery-info h4{
+    font-size:16px;
+    margin-bottom:5px;
+    color:#0A3D91;
+}
+
+.gallery-info p{
+    font-size:14px;
+    color:#555;
+}
+
+/* ===== LOADER ===== */
+#loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+
+.spinner{
+    width:50px;
+    height:50px;
+    border:5px solid #eee;
+    border-top:5px solid #0A3D91;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{ transform:rotate(0deg); }
+    100%{ transform:rotate(360deg); }
+}
+
+/* ===== MODAL ===== */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1500;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:20px;
+}
+
+.modal-content{
+    max-width:80%;
+    max-height:60%;
+    border-radius:10px;
+}
+
+.modal-caption{
+    color:white;
+    text-align:center;
+    margin-top:20px;
+    max-width:700px;
+}
+
+.modal-nav{
+    position:absolute;
+    width:100%;
+    top:50%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 40px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
